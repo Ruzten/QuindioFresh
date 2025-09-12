@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.poo.quindiofresh/co.edu.uniquindio.poo.quindiofresh.HelloApplication
+                                co.edu.uniquindio.poo.quindiofresh/co.edu.uniquindio.poo.quindiofresh.Model.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

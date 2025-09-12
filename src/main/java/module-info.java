@@ -4,5 +4,8 @@ module co.edu.uniquindio.poo.quindiofresh {
 
 
     opens co.edu.uniquindio.poo.quindiofresh to javafx.fxml;
-    exports co.edu.uniquindio.poo.quindiofresh;
+    exports co.edu.uniquindio.poo.quindiofresh.Model;
+    opens co.edu.uniquindio.poo.quindiofresh.Model to javafx.fxml;
+    exports co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
+    opens co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas to javafx.fxml;
 }

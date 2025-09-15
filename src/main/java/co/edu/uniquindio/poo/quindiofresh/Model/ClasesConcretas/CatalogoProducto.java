@@ -1,14 +1,20 @@
 package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
 
+import co.edu.uniquindio.poo.quindiofresh.Helpers.JsonLoader;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-class CatalogoProducto {
+public class CatalogoProducto {
     private static CatalogoProducto instance;
     private List<Producto> productos;
 
     private CatalogoProducto() {
-        this.productos = new ArrayList<>();
+        this.productos = JsonLoader.CargarProductos("Productos.json",  Producto.class);
     }
 
     public static CatalogoProducto getInstance() {
@@ -25,5 +31,9 @@ class CatalogoProducto {
             }
         }
         return 0.0;
+    }
+
+    public List<Producto> MostrarProductos() {
+        return productos;
     }
 }

@@ -5,6 +5,12 @@ public class Producto {
     private String nombre;
     private double precio;
 
+    public Producto(String sku, String nombre, double precio){
+        this.Sku = sku;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
     public String getSku() {
         return Sku;
     }
@@ -27,5 +33,14 @@ public class Producto {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "sku='" + Sku + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio +
+                '}'+ '\n';
     }
 }

@@ -57,4 +57,8 @@ public class Cliente {
         this.pedidos = pedidos;
     }
 
+    public void agregarPedido(Pedido nuevoPedido) {
+        this.pedidos.add(nuevoPedido);
+    }
+
 }

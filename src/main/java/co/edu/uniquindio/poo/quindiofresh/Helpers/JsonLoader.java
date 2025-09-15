@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonLoader {
-    //Lee el JSON y lo convierte a una objeto indicado
+    //Lee el JSON y lo convierte a un objeto indicado
     public static <T> List<T> CargarProductos(String fileName, Class<T> clazz) {
         try (var inputStream = JsonLoader.class.getClassLoader().getResourceAsStream(fileName)) {
             try (var reader = new InputStreamReader(inputStream)) {

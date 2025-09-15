@@ -20,11 +20,11 @@ public class CatalogoProducto {
         return instance;
     }
 
-    public void AgregarProducto(Producto producto) {
+    public void CreateProduct(Producto producto) {
         this.productos.add(producto);
     }
 
-    public Producto EliminarProducto(String id) {
+    public Producto DeleteProduct(String id) {
         List<Producto> NewProduct = new ArrayList<>(this.productos);
         for(Producto p : NewProduct){
            if(p.getSku().equals(id)){
@@ -35,11 +35,11 @@ public class CatalogoProducto {
         return null;
     }
 
-    public List<Producto> MostrarTodosProductos() {
+    public List<Producto> getAllProduct() {
         return productos;
     }
 
-    public Producto MostrarProducto(String nombre) {
+    public Producto getProducto(String nombre) {
         for (Producto producto : productos) {
             if (producto.getNombre().equals(nombre)) {
                 return producto;

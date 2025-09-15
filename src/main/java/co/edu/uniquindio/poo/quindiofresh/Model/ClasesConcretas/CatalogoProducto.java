@@ -1,11 +1,7 @@
 package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
 
 import co.edu.uniquindio.poo.quindiofresh.Helpers.JsonLoader;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import java.lang.reflect.Type;
-import java.io.FileReader;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,16 +20,43 @@ public class CatalogoProducto {
         return instance;
     }
 
-    public double getPrecio(String sku) {
-        for (Producto p : productos) {
-            if (p.getSku().equals(sku)) {
-                return p.getPrecio();
-            }
-        }
-        return 0.0;
+    public void AgregarProducto(Producto producto) {
+        this.productos.add(producto);
     }
 
-    public List<Producto> MostrarProductos() {
+    public Producto EliminarProducto(String id) {
+        List<Producto> NewProduct = new ArrayList<>(this.productos);
+        for(Producto p : NewProduct){
+           if(p.getSku().equals(id)){
+               this.productos.remove(p);
+               return p;
+           }
+        }
+        return null;
+    }
+
+    public List<Producto> MostrarTodosProductos() {
         return productos;
+    }
+
+    public Producto MostrarProducto(String nombre) {
+        for (Producto producto : productos) {
+            if (producto.getNombre().equals(nombre)) {
+                return producto;
+            }
+        }
+        return null;
+    }
+
+    public Producto UpdateProducto(String id, Producto producto){
+        List<Producto> updateProduct = new ArrayList<>(this.productos);
+        for(Producto p : updateProduct){
+            if(p.getSku().equals(id)){
+                p.setNombre(producto.getNombre());
+                p.setPrecio(producto.getPrecio());
+            }
+            return p;
+        }
+        return null;
     }
 }

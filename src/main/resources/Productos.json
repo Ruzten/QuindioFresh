@@ -1,151 +1,151 @@
 [
   {
-    "sku": "LECHE001",
+    "Sku": "LECHE001",
     "nombre": "Leche Entera, 1L",
     "precio": 4500
   },
   {
-    "sku": "HUEVOS002",
+    "Sku": "HUEVOS002",
     "nombre": "Huevos, bandeja x30",
     "precio": 18000
   },
   {
-    "sku": "PAN003",
+    "Sku": "PAN003",
     "nombre": "Pan Tajado Integral",
     "precio": 5200
   },
   {
-    "sku": "AGUA004",
+    "Sku": "AGUA004",
     "nombre": "Agua purificada, botella 1L",
     "precio": 2500
   },
   {
-    "sku": "POLLO005",
+    "Sku": "POLLO005",
     "nombre": "Pechuga de pollo, 500g",
     "precio": 11500
   },
   {
-    "sku": "TOMATE006",
+    "Sku": "TOMATE006",
     "nombre": "Tomate chonto, 1kg",
     "precio": 3800
   },
   {
-    "sku": "QUESO007",
+    "Sku": "QUESO007",
     "nombre": "Queso campesino, 250g",
     "precio": 7200
   },
   {
-    "sku": "ARROZ008",
+    "Sku": "ARROZ008",
     "nombre": "Arroz, 500g",
     "precio": 2100
   },
   {
-    "sku": "AZUCAR009",
+    "Sku": "AZUCAR009",
     "nombre": "Azúcar, 1kg",
     "precio": 4000
   },
   {
-    "sku": "CAFE010",
+    "Sku": "CAFE010",
     "nombre": "Café tostado y molido, 250g",
     "precio": 15000
   },
   {
-    "sku": "SAL011",
+    "Sku": "SAL011",
     "nombre": "Sal refinada, 500g",
     "precio": 1200
   },
   {
-    "sku": "ACEITE012",
+    "Sku": "ACEITE012",
     "nombre": "Aceite de cocina, 1L",
     "precio": 12500
   },
   {
-    "sku": "MANZANA013",
+    "Sku": "MANZANA013",
     "nombre": "Manzana roja, 1 unidad",
     "precio": 1800
   },
   {
-    "sku": "BANANO014",
+    "Sku": "BANANO014",
     "nombre": "Banano, 1kg",
     "precio": 3500
   },
   {
-    "sku": "NARANJA015",
+    "Sku": "NARANJA015",
     "nombre": "Naranja, 1kg",
     "precio": 2800
   },
   {
-    "sku": "CEBOLLA016",
+    "Sku": "CEBOLLA016",
     "nombre": "Cebolla de rama, 500g",
     "precio": 2400
   },
   {
-    "sku": "ZANAH017",
+    "Sku": "ZANAH017",
     "nombre": "Zanahoria, 500g",
     "precio": 1900
   },
   {
-    "sku": "PAPAS018",
+    "Sku": "PAPAS018",
     "nombre": "Papas, 1kg",
     "precio": 4200
   },
   {
-    "sku": "ATUN019",
+    "Sku": "ATUN019",
     "nombre": "Atún en aceite, lata",
     "precio": 6500
   },
   {
-    "sku": "PASTA020",
+    "Sku": "PASTA020",
     "nombre": "Pasta tipo spaguetti, 500g",
     "precio": 3100
   },
   {
-    "sku": "CEREAL021",
+    "Sku": "CEREAL021",
     "nombre": "Cereal de avena, caja",
     "precio": 9800
   },
   {
-    "sku": "GALLET022",
+    "Sku": "GALLET022",
     "nombre": "Galletas de soda, paquete",
     "precio": 2700
   },
   {
-    "sku": "JABON023",
+    "Sku": "JABON023",
     "nombre": "Jabón de baño, barra",
     "precio": 3900
   },
   {
-    "sku": "PAPEL024",
+    "Sku": "PAPEL024",
     "nombre": "Papel higiénico, rollo x4",
     "precio": 8500
   },
   {
-    "sku": "SHAMPOO025",
+    "Sku": "SHAMPOO025",
     "nombre": "Shampoo anticaspa, 400ml",
     "precio": 15000
   },
   {
-    "sku": "JUGOS026",
+    "Sku": "JUGOS026",
     "nombre": "Jugo de naranja, caja 1L",
     "precio": 5500
   },
   {
-    "sku": "REFRES027",
+    "Sku": "REFRES027",
     "nombre": "Gaseosa, 2L",
     "precio": 4800
   },
   {
-    "sku": "CARNE028",
+    "Sku": "CARNE028",
     "nombre": "Carne molida, 500g",
     "precio": 14000
   },
   {
-    "sku": "FRIJOL029",
+    "Sku": "FRIJOL029",
     "nombre": "Frijol seco, 500g",
     "precio": 6100
   },
   {
-    "sku": "LENTEJ030",
+    "Sku": "LENTEJ030",
     "nombre": "Lenteja, 500g",
     "precio": 5800
   }

@@ -1,6 +1,7 @@
 module co.edu.uniquindio.poo.quindiofresh {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jakarta.mail;
 
 
     opens co.edu.uniquindio.poo.quindiofresh to javafx.fxml;

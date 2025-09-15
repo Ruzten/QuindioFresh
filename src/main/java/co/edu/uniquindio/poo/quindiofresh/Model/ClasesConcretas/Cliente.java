@@ -56,4 +56,5 @@ public class Cliente {
     public void setPedidos(ArrayList<Pedido> pedidos) {
         this.pedidos = pedidos;
     }
+
 }

@@ -26,7 +26,10 @@ public class DetallePedido {
     }
 
     public double calcularSubtotal () {
-        return producto.getPrecio() * cantidad;
+        if(producto != null) {
+            return producto.getPrecio() * cantidad;
+        }
+        return 0.0;
     }
 
 }

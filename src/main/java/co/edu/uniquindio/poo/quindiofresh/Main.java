@@ -24,7 +24,7 @@ public class Main {
 
         JOptionPane.showMessageDialog(null, "Ahora, vamos a crear tu pedido.", "QuindioFresh // Pedido", 1);
 
-        List<Producto> productosDisponibles = catalogoProducto.MostrarTodosProductos();
+        List<Producto> productosDisponibles = catalogoProducto.getAllProduct();
         String mensajeProductos = "Productos disponibles:\n";
         for (Producto p : productosDisponibles) {
             mensajeProductos += "SKU: " + p.getSku() + ", Nombre: " + p.getNombre() + ", Precio: $" + p.getPrecio() + "\n";
@@ -55,7 +55,7 @@ public class Main {
 
         String idPedido = "PED" + System.currentTimeMillis();
         PedidoBuilder builder = new PedidoBuilder(idPedido, new Date(), sesion.getClienteActual());
-        builder.withDetalle(detalle);
+
 
         if (direccionEnvio != null && !direccionEnvio.isEmpty()) {
             builder.withDireccion(direccionEnvio);
@@ -75,7 +75,7 @@ public class Main {
 
 
 
-        List<Producto> producto = catalogoProducto.MostrarTodosProductos();
+        List<Producto> producto = catalogoProducto.getAllProduct();
         Producto producto1 = producto.get(0);
 
         System.out.println(producto1);

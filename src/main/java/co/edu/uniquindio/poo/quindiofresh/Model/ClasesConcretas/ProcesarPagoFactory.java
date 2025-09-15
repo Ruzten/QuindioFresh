@@ -1,7 +1,9 @@
-package co.edu.uniquindio.poo.quindiofresh.Model;
+package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
+
+import co.edu.uniquindio.poo.quindiofresh.Model.Interfaces.IprocessPago;
 
 public class ProcesarPagoFactory {
-    static IProcesarPago tipoPago(String tipo){
+    static IprocessPago tipoPago(String tipo){
         switch (tipo) {
             case "Tarjeta":
                 TarjetaCredito tarjetaCredito = new TarjetaCredito();

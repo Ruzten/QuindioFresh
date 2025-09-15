@@ -1,4 +1,6 @@
-package co.edu.uniquindio.poo.quindiofresh.Model;
+package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
+
+import co.edu.uniquindio.poo.quindiofresh.Model.Interfaces.Inotificaciones;
 
 public class NotificacionesFactory {
     static Inotificaciones Notificaciones(String tipo){

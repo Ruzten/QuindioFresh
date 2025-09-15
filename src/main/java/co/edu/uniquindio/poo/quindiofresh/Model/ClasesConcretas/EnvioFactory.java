@@ -1,7 +1,9 @@
-package co.edu.uniquindio.poo.quindiofresh.Model;
+package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
+
+import co.edu.uniquindio.poo.quindiofresh.Model.Interfaces.Ienvio;
 
 public class EnvioFactory {
-    static IEnvio CrearTipoEnvio (String tipo){
+    static Ienvio CrearTipoEnvio (String tipo){
         switch (tipo){
             case  "Standar":
                 EnvioStandar envioStandar = new EnvioStandar();

@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.quindiofresh.Model;
+package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
 
 import java.util.ArrayList;
 import java.util.List;

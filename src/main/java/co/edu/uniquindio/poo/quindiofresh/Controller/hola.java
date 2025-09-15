@@ -1,2 +1,4 @@
-package co.edu.uniquindio.poo.quindiofresh.Controller;public class hola {
+package co.edu.uniquindio.poo.quindiofresh.Controller;
+
+public class hola {
 }

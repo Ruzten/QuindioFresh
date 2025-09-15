@@ -1,10 +1,21 @@
 package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
 
+import java.util.ArrayList;
+
 public class Cliente {
     private String id;
     private String nombre;
     private String email;
-    private String Telefono;
+    private String telefono;
+    private ArrayList<Pedido> pedidos;
+
+    public Cliente(String id, String nombre, String email, String telefono) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.telefono = telefono;
+        this.pedidos = new ArrayList();
+    }
 
     public String getId() {
         return id;
@@ -31,10 +42,18 @@ public class Cliente {
     }
 
     public String getTelefono() {
-        return Telefono;
+        return telefono;
     }
 
     public void setTelefono(String telefono) {
-        Telefono = telefono;
+        this.telefono = telefono;
+    }
+
+    public ArrayList<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(ArrayList<Pedido> pedidos) {
+        this.pedidos = pedidos;
     }
 }

@@ -1,12 +1,16 @@
 package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Pedido {
     private String id;
     private Date fecha;
+    private Cliente cliente;
+    private ArrayList<DetallePedido> detalles;
     private String direccion;
     private String nota;
+    private String codigoDescuento;
 
     protected Pedido(PedidoBuilder builder) {
         this.id = builder.id;

@@ -35,6 +35,15 @@ public class CatalogoProducto {
         return null;
     }
 
+    public Producto buscarProductoPorSKU(String sku) {
+        for (Producto p : productos) {
+            if (p.getSku().equals(sku)) {
+                return p;
+            }
+        }
+        return null; // Si el bucle termina y no se encontró, retorna null.
+    }
+
     public List<Producto> getAllProduct() {
         return productos;
     }

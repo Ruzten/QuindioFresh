@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.quindiofresh;
 
+
 import co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas.CatalogoProducto;
 import co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas.Producto;
 

@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.util.Date;
 import java.util.List;
 
+import static co.edu.uniquindio.poo.quindiofresh.Middleware.validadorDatos.*;
 import static co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas.ProcesarPagoFactory.tipoPago;
 
 public class Main {
@@ -18,9 +19,9 @@ public class Main {
 
         JOptionPane.showMessageDialog(null, "Bienvenido a la tienda virtual QuindioFresh!", "QuindioFresh // Registro", 1, icono);
         String idCliente = JOptionPane.showInputDialog("Por favor ingresa tu cedula");
-        String nombreCliente = JOptionPane.showInputDialog("Por favor ingresa tu nombre");
-        String emailCliente = JOptionPane.showInputDialog("Por favor ingresa tu email");
-        String telefonoCliente = JOptionPane.showInputDialog("Por favor ingresa tu numero de telefono");
+        String nombreCliente = validatortext(null);
+        String emailCliente = validatorEmail(null);
+        String telefonoCliente = validatorphone(null);
         Cliente cliente = new Cliente(idCliente, nombreCliente, emailCliente, telefonoCliente);
         sesion.registrarCliente(cliente);
         JOptionPane.showMessageDialog(null, "¡Registro exitoso para " + sesion.getClienteActual().getNombre() + "!");

@@ -37,8 +37,6 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "sku= " + Sku  +
-                ",nombre= " + nombre +
-                ", precio= " + precio + '\n';
+        return nombre + " valor unitario: " + precio;
     }
 }

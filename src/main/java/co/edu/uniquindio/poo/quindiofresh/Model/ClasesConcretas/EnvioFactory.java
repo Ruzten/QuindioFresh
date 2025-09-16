@@ -3,14 +3,14 @@ package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
 import co.edu.uniquindio.poo.quindiofresh.Model.Interfaces.Ienvio;
 
 public class EnvioFactory {
-    static Ienvio CrearTipoEnvio (String tipo){
-        switch (tipo){
-            case  "Standar":
-                EnvioStandar envioStandar = new EnvioStandar();
-                break;
+    public static Ienvio CrearTipoEnvio (String tipo){
+        switch (tipo) {
+            case "Estandar":
+                return new EnvioStandar();
             case "Express":
-                EnvioExpress envioExpress = new EnvioExpress();
+                return new EnvioExpress();
+            default:
+                throw new IllegalArgumentException("Tipo de envío no soportado: " + tipo);
         }
-        return  null;
     }
 }

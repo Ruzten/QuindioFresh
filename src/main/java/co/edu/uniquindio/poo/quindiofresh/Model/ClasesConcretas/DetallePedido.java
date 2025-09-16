@@ -32,4 +32,9 @@ public class DetallePedido {
         return 0.0;
     }
 
+    @Override
+    public String toString() {
+        return  "producto:" + producto + "\n" +
+                "cantidad:" + cantidad + "\n\n";
+    }
 }

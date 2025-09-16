@@ -15,8 +15,31 @@ public class Pedido {
     protected Pedido(PedidoBuilder builder) {
         this.id = builder.id;
         this.fecha = builder.fecha;
+        this.cliente = builder.cliente;
+        this.detalles = builder.detalles;
         this.direccion = builder.direccion;
         this.nota = builder.nota;
+        this.codigoDescuento = builder.codigoDescuento;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setDetalles(ArrayList<DetallePedido> detalles) {
+        this.detalles = detalles;
+    }
+
+    public String getCodigoDescuento() {
+        return codigoDescuento;
+    }
+
+    public void setCodigoDescuento(String codigoDescuento) {
+        this.codigoDescuento = codigoDescuento;
     }
 
     public String getId() {
@@ -49,5 +72,17 @@ public class Pedido {
 
     public void setNota(String nota) {
         this.nota = nota;
+    }
+
+    public double calcularTotal () {
+        double total = 0;
+        for (DetallePedido detallePedido : detalles) {
+            total += detallePedido.calcularSubtotal();
+        }
+        return total;
+    }
+
+    public ArrayList<DetallePedido> getDetalles() {
+        return detalles;
     }
 }

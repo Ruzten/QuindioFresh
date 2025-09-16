@@ -34,6 +34,18 @@ public class PedidoBuilder {
         return this;
     }
 
+    public void agregarDetalle (DetallePedido detallePedido) {
+        detalles.add(detallePedido);
+    }
+
+    public double calcularTotal () {
+        double total = 0;
+        for (DetallePedido detallePedido : detalles) {
+            total += detallePedido.calcularSubtotal();
+        }
+        return total;
+    }
+
     public ArrayList<DetallePedido> getDetallesPedido() {
         return detalles;
     }
@@ -44,5 +56,16 @@ public class PedidoBuilder {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "PedidoBuilder{" +
+                "id='" + id + '\'' +
+                ", fecha=" + fecha +
+                ", cliente=" + cliente +
+                ", detalles=" + detalles +
+                ", direccion='" + direccion + '\'' +
+                ", nota='" + nota + '\'' +
+                ", codigoDescuento='" + codigoDescuento + '\'' +
+                '}';
+    }
 }

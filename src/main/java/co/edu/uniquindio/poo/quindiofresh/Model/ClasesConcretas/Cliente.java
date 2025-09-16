@@ -57,6 +57,17 @@ public class Cliente {
         this.pedidos = pedidos;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", pedidos=" + pedidos +
+                '}';
+    }
+
     public void agregarPedido(Pedido nuevoPedido) {
         this.pedidos.add(nuevoPedido);
     }

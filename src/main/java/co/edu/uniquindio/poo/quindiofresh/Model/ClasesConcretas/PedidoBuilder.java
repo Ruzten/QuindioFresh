@@ -34,10 +34,15 @@ public class PedidoBuilder {
         return this;
     }
 
+    public ArrayList<DetallePedido> getDetallesPedido() {
+        return detalles;
+    }
 
 
     public Pedido build() {
         return new Pedido(this);
     }
+
+
 
 }

@@ -37,7 +37,7 @@ public class CatalogoProducto {
 
     public Producto buscarProductoPorSKU(String sku) {
         for (Producto p : productos) {
-            if (p.getSku().equals(sku)) {
+            if (p.getSku().equalsIgnoreCase(sku)) {
                 return p;
             }
         }

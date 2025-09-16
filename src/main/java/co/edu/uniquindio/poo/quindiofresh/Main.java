@@ -1,10 +1,13 @@
 package co.edu.uniquindio.poo.quindiofresh;
 
 import co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas.*;
+import co.edu.uniquindio.poo.quindiofresh.Model.Interfaces.IprocessPago;
 
 import javax.swing.*;
 import java.util.Date;
 import java.util.List;
+
+import static co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas.ProcesarPagoFactory.tipoPago;
 
 public class Main {
     public static void main(String[] args) {
@@ -67,13 +70,53 @@ public class Main {
             builder.withCodigoDescuento(codigoDescuento);
         }
 
+        boolean pagoExitoso = false;
+        while (!pagoExitoso) {
+            String[] opcionesPago = {"Tarjeta", "PSE"};
+            String SeleccionarPago = (String) JOptionPane.showInputDialog(
+                    null,
+                    "Selecciona tu método de pago:",
+                    "Método de Pago",
+                    JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    opcionesPago,
+                    opcionesPago[0]
+            );
+
+            if (SeleccionarPago == null) {
+                int respuesta = JOptionPane.showConfirmDialog(null, "¿Deseas cancelar el pedido?", "Confirmar Cancelación", JOptionPane.YES_NO_OPTION);
+                if (respuesta == JOptionPane.YES_OPTION) {
+                    JOptionPane.showMessageDialog(null, "Proceso de pedido cancelado.", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+                    return;
+                }
+            } else {
+                try {
+                    IprocessPago procesador = ProcesarPagoFactory.tipoPago(SeleccionarPago);
+                    double subtotalPedido = 0.0;
+                    if (builder.getDetallesPedido() != null) {
+                        for (DetallePedido d : builder.getDetallesPedido()) {
+                            subtotalPedido += d.calcularSubtotal();
+                        }
+                    }
+
+                    System.out.println("Subtotal: " + procesador);
+                    boolean mensaje = procesador.procesarPago(subtotalPedido);
+
+                    if (mensaje) {
+                        JOptionPane.showMessageDialog(null, "Pago realizado", "Pago Exitoso", JOptionPane.INFORMATION_MESSAGE);
+                        pagoExitoso = true;
+                    }
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Pago rechazado. Por favor, intenta de nuevo.", "Pago Rechazado", JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+        }
+
+
         Pedido pedido = builder.build();
 
         JOptionPane.showMessageDialog(null, "¡Pedido creado con éxito!\nID del pedido: " + pedido.getId(), "Pedido Creado", JOptionPane.INFORMATION_MESSAGE);
-
-
-
-
 
         List<Producto> producto = catalogoProducto.getAllProduct();
         Producto producto1 = producto.get(0);

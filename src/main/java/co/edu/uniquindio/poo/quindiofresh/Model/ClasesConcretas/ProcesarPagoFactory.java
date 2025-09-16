@@ -3,14 +3,14 @@ package co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas;
 import co.edu.uniquindio.poo.quindiofresh.Model.Interfaces.IprocessPago;
 
 public class ProcesarPagoFactory {
-    static IprocessPago tipoPago(String tipo){
+    public static IprocessPago tipoPago(String tipo){
         switch (tipo) {
             case "Tarjeta":
                 TarjetaCredito tarjetaCredito = new TarjetaCredito();
-                break;
+                return  tarjetaCredito;
             case "PSE":
                 PSE pse = new PSE();
-                break;
+                return  pse;
         }
         return  null;
     }

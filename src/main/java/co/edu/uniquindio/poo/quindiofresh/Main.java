@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.util.Date;
 import java.util.List;
 
+import static co.edu.uniquindio.poo.quindiofresh.Middleware.validadorDatos.*;
 import static co.edu.uniquindio.poo.quindiofresh.Model.ClasesConcretas.ProcesarPagoFactory.tipoPago;
 
 public class Main {
@@ -19,10 +20,10 @@ public class Main {
         Icon icono = new ImageIcon("src/main/resources/co/edu/uniquindio/poo/quindiofresh/QuindioFresh.png");
 
         JOptionPane.showMessageDialog(null, "Bienvenido a la tienda virtual QuindioFresh!", "QuindioFresh // Registro", 1, icono);
-        String idCliente = JOptionPane.showInputDialog("Por favor ingresa tu cedula");
-        String nombreCliente = JOptionPane.showInputDialog("Por favor ingresa tu nombre");
-        String emailCliente = JOptionPane.showInputDialog("Por favor ingresa tu email");
-        String telefonoCliente = JOptionPane.showInputDialog("Por favor ingresa tu numero de telefono");
+        String idCliente = validatorNumber(null, "Cedula");
+        String nombreCliente = validatortext(null, "nombre");
+        String emailCliente = validatorEmail(null);
+        String telefonoCliente = validatorNumber(null, "telefono");
         Cliente cliente = new Cliente(idCliente, nombreCliente, emailCliente, telefonoCliente);
         sesion.registrarCliente(cliente);
         JOptionPane.showMessageDialog(null, "¡Registro exitoso para " + sesion.getClienteActual().getNombre() + "!");
@@ -83,7 +84,7 @@ public class Main {
 
         String[] opciones2 = {"Estandar", "Express"};
         int eleccionEnvio = JOptionPane.showOptionDialog(null, "¿Que tipo de envio prefiere?\nEstandar: 7.000 pesos\nExpress: 15.000 pesos", "TipoEnvio",JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones2, opciones2[0]);
-        String direccionEnvio = JOptionPane.showInputDialog("Ingresa tu dirección de envío: ");
+        String direccionEnvio = validatortext(null, "dirección de envío: ");
 
         String tipoEnvioSelecc = opciones2[eleccionEnvio];
         Ienvio procesarEnvio = EnvioFactory.CrearTipoEnvio(tipoEnvioSelecc);

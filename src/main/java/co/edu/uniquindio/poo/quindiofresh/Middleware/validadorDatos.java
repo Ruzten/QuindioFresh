@@ -7,16 +7,17 @@ import java.awt.*;
 import static java.util.regex.Pattern.matches;
 
 public class validadorDatos {
-    public static String validatortext (Component parent) {
+    public static String validatortext (Component parent, String value) {
         while (true) {
-            String input = JOptionPane.showInputDialog(parent, "Por favor ingresa tu nombre: ");
+            String input = JOptionPane.showInputDialog(parent, "Por favor ingresa tu "+value+ ": ");
             if (input == null) return null;
             input = input.trim();
             if (input.matches("(?i)^[a-záéíóúñü\\s]{2,}$")) {
                 return input;
             }
             JOptionPane.showMessageDialog(parent,
-                    "Nombre inválido. Ingresa solo letras y espacios (mínimo 2 caracteres).",
+                    "Información inválida. Ingresa solo letras" +
+                            ".",
                     "Validación", JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -34,16 +35,16 @@ public class validadorDatos {
         }
     }
 
-    public static String validatorphone (Component parent){
+    public static String validatorNumber (Component parent, String value){
         while (true) {
-            String input = JOptionPane.showInputDialog(parent, "Por favor ingresa tu número de teléfono");
+            String input = JOptionPane.showInputDialog(parent, "Por favor ingresa tu número de "+value);
             if (input == null) return null;
             input = input.trim();
-            if (input.matches("^[0-9]{7,15}$")) { // solo dígitos, longitud razonable
+            if (input.matches("^[0-9]{7,15}$")) {
                 return input;
             }
-            JOptionPane.showMessageDialog(parent, "Teléfono inválido. Debe contener solo dígitos, (7 a 15).", "Validación", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(parent, "Información invaliad. Debe contener solo dígitos, (7 a 15).", "Validación", JOptionPane.ERROR_MESSAGE);
         }
-
     }
+
 }

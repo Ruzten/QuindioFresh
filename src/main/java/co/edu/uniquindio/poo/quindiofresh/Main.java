@@ -57,7 +57,7 @@ public class Main {
                 continue;
             }
 
-            String cantidadStr = JOptionPane.showInputDialog("Ingresa la cantidad:");
+            String cantidadStr = validatorCantidad(null);
             if (cantidadStr == null) {
                 JOptionPane.showMessageDialog(null, "Creación de pedido cancelada.", "Aviso", JOptionPane.INFORMATION_MESSAGE);
                 return;
